@@ -1,3 +1,3 @@
-# Steak-House"
+# Steak-House
 
-![cover-banner](img/cover-banner.png)" 
+![cover-banner](img/cover-banner.png)
