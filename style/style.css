@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Ruthie&family=Yesteryear&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins";
+    color: white;
+}
+
+body {
+    background-color: #1D1D1D;
+    position: relative;
+    padding: 20px;
+}
+
+#steakhousefont {
+    font: 400 36px 'Yesteryear';
+}
+
+
+nav {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    font: 500 18px 'Poppins';
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #BB9356;
+    transition: all 400ms;
+}
+
+nav .active {
+    color: #BB9356;
+}
+
+.menus img {
+    height: 20px;
+}
+
+.menus img:hover {
+    opacity: 0.7;
+    transition: all 400ms;
+}
+
+/* one */
+#one {
+    position: relative;
+}
+
+#one-img {
+    opacity: 0.4;
+    mix-blend-mode: lighten;
+}
+
+#one-content {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+}
+
+.h4-primary {
+    color: #BB9356;
+    font: 48px "Ruthie";
+    line-height: 20px;
+}
+
+.h3-white {
+    color: white;
+    font: 56px "Abril Fatface";
+}
+
+.p1-white {
+    color: white;
+    font: 18px "Poppins";
+}
+
+/* two */
+#two-content {
+    padding: 100px;
+}
+
+.h5-primary {
+    color: #BB9356;
+    font: 28px "Ruthie";
+    line-height: 20px;
+}
+
+.h4-white {
+    color: white;
+    font: 36px "Abril Fatface";
+}
+
+.p2-white {
+    color: white;
+    font: 16px "Poppins";
+    width: 80%;
+}
+
+/* three */
+#three-content {
+    position: relative;
+}
+
+#three-content>img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.home-menu {
+    display: grid;
+    gap: 0;
+    place-content: center;
+    grid-template-columns: auto auto;
+    width: 80%;
+}
+
+.home-card-img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.home-card-content {
+    width: 50%;
+    background-color: #222222;
+    font-size: 14px;
+}
+
+.home-card-content>div {
+    border: 1px dotted #CDAF80;
+    line-height: 26px;
+}
+
+.price {
+    color: #BB9356;
+    font-size: 18px;
+}
+
+.h5-homeCard {
+    font-weight: 600;
+}
+
+button {
+    border-radius: 50px;
+    color: white;
+    background-color: #BB9356;
+    font-family: "Poppins";
+    padding: 5px 30px;
+}
+
+@media screen and (max-width: 960px) {
+    .home-card {
+        flex-direction: column;
+    }
+}
