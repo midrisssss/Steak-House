@@ -13,23 +13,42 @@
 
 <body>
     <nav class="container-fluid d-flex justify-content-center p-4">
-        <div class="container row d-flex align-items-center justify-content-between">
-            <div class="col-3"><a href="" id="steakhousefont">Steak House</a></div>
+        <div id="nav-content" class="container row d-flex align-items-center justify-content-between">
+            <div class="col"><a href="" id="nav-brand">Steak House</a></div>
             <div class="col-6 d-flex justify-content-between">
-                <div class="col"><a href="#" class=" active">Home</a></div>
-                <div class="col"><a href="#" class="">Menu</a></div>
-                <div class="col"><a href="#" class="">Book A Table</a></div>
-                <div class="col"><a href="#" class="">About</a></div>
+                <div class="col"><a href="#" class="active nav-muted">Home</a></div>
+                <div class="col"><a href="#" class="nav-muted">Menu</a></div>
+                <div class="col"><a href="#" class="nav-muted">Book A Table</a></div>
+                <div class="col"><a href="#" class="nav-muted">About</a></div>
             </div>
-            <div class="menus col-3 row align-items-center">
-                <a href="#" class="col"><img src="../img/pseudo.png" alt=""></a>
-                <a href="#" class="col"><img src="../img/search.png" alt=""></a>
-                <a href="#" class="col"><img src="../img/keranjang.png" alt=""></a>
-                <a href="#" class="col"><img src="../img/garistiga.png" alt=""></a>
+            <div class="menus col row align-items-center">
+                <button class="col nav-muted  nav-button"><img src="../img/pseudo.png" alt=""></button>
+                <button class="col nav-muted nav-button"><img src="../img/search.png" alt=""></button>
+                <button class="col nav-muted nav-button"><img src="../img/keranjang.png" alt=""></button>
+                <button class="col d-flex justify-content-end nav-button" id="nav-menu"><img src="../img/garistiga.png" alt="">
+                </button>
             </div>
         </div>
+        <ul id="sidebar" class="text-center open">
+            <li>
+                <ul class="d-block">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Book A Table</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <ul id="account" class="d-block">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
     <main>
+
         <section id="one">
             <img src="../img/3.jpg" class="img-fluid" alt="" id="one-img">
             <div id="one-content" class="container-fluid text-center">
@@ -39,7 +58,7 @@
                     awesome recipes and the
                     most
                     talented chefs in town! </p>
-                <button class="">View Menu</button>
+                <button class="button hover">View Menu</button>
             </div>
         </section>
         <section id="two-content" class="container d-flex flex-column align-items-center text-center">
@@ -53,11 +72,10 @@
             <img src="../img/bg-menu-preview.png" class="" alt="">
             <div class="home-menu mx-auto">
                 <div class="home-card d-flex">
-                    <div class="home-card-content p-3">
+                    <div class="home-card-content col p-3">
                         <div class="p-3 text-center">
                             <span class="price">$45.95</span>
                             <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <img src="./img/shape-4.png" alt="">
                             <p class="">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
@@ -72,8 +90,7 @@
                         <div class="p-3 text-center">
                             <span class="price">$45.95</span>
                             <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <img src="./img/shape-4.png" alt="">
-                            <p class="">Pork fillet, ginger, garlic, honey,
+                            <p class="o">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
