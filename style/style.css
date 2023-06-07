@@ -9,14 +9,17 @@
   color: white;
 }
 
+a {
+  cursor: pointer;
+}
+
 body {
-  padding: 20px;
   background-color: #1d1d1d;
   position: relative;
 }
 
-#nav-brand {
-  font: 400 36px "Yesteryear";
+main {
+  padding: 20px;
 }
 
 /* navigation */
@@ -27,6 +30,10 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1;
+}
+
+nav .active {
+  color: #bb9356;
 }
 
 nav a {
@@ -40,15 +47,15 @@ nav a:hover {
   transition: all 400ms;
 }
 
-nav .active {
-  color: #bb9356;
+#nav-brand {
+  font: 400 36px "Yesteryear";
 }
 
 .nav-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .menus img {
@@ -60,24 +67,46 @@ nav .active {
   opacity: 0.7;
   transition: all 400ms;
 }
-.open {
-    display: none;
+
+/* sidebar */
+.sidebar {
+  display: none;
+  width: 15vw;
+  background-color: rgb(14, 13, 13, 0.7);
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  line-height: 50px;
+  border-radius: 8px;
+  transform: translateY(0px);
+  z-index: 3;
 }
 
-#sidebar {
-    background-color: rgb(14, 13, 13, 0.4);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    padding-top: 100px;
-    padding-left: 0;
-    z-index: 3;
+.sidebar.show {
+  display: block;
+  top: 80px;
+  animation: openNav ease-out 0.4s;
 }
-#sidebar>li>ul>li>a {
-    line-height: 50px;
+
+@keyframes openNav{
+  0% {
+    opacity: 0;
+    top: 110px;
+  }
+  100% {
+    opacity: 1;
+    top: 80px;
+  }
 }
+
+.sidebar-top {
+  display: none;
+}
+
+hr {
+  border: 2px solid white;
+}
+
 /* navigation end */
 /* one */
 #one {
@@ -138,7 +167,7 @@ nav .active {
   position: relative;
 }
 
-#three-content > img {
+#three-content>img {
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -167,7 +196,7 @@ nav .active {
   font-size: 12px;
 }
 
-.home-card-content > div {
+.home-card-content>div {
   border: 1px dotted #cdaf80;
   line-height: 26px;
 }
@@ -198,18 +227,28 @@ button.hover:hover {
 }
 
 .nav-button {
-    border: none;
-    background-color: transparent;
-    padding: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 @media screen and (max-width: 1024px) {
   #nav-brand {
     font-size: 24px;
   }
+
   .nav-muted {
     display: none;
   }
+
+  .sidebar.show {
+    width: 100vw;
+  }
+
+  .sidebar-top {
+    display: block;
+  }
+
   .home-card {
     flex-direction: column;
   }
@@ -219,6 +258,7 @@ button.hover:hover {
   #nav-brand {
     font-size: 16px;
   }
+
   .menus img {
     height: 10px;
   }

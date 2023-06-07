@@ -1,11 +1,9 @@
-// import { searchListener, openNavListener } from "./handler.js";
+// import { openNavListener, searchListener } from "./handler.js";
 
 $(document).ready(function () {
-  //   $("#search").click(searchListener);
-  $("#nav-menu").click(function () {
-    alert("a");
+  $('.openNav').click(function () {
+    $('.sidebar').toggleClass('show');
   });
-  alert("heloo");
 });
 
 // <ul id="account">
@@ -14,3 +12,8 @@ $(document).ready(function () {
 // <li><a href="#">my Service</a></li>
 // </ul>
 // </li>
+
+
+// show => munculin sidebar
+
+// !show => tidak ada sidebar
