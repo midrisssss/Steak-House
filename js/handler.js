@@ -1,11 +1,20 @@
-import { menu } from "menu.js";
+import { review } from './review.js';
 
-function searchListener() { }
-function openNavListener() {
-  $(".sidebar").toggle("open");
+function pageLoad() {
+  $('.reviewer>.message').text(review[0].message);
+  $('.reviewer img').attr('src', review[0].img);
+  $('.reviewer figcaption').text(review[0].name);
 }
+function openSidebarListener() {
+  $('#chart-nav.dropdown-nav').removeClass('show');
+  $('#sidebar-nav.dropdown-nav').toggleClass('show');
+}
+function openChartListener() {
+  $('#sidebar-nav.dropdown-nav').removeClass('show');
+  $('#chart-nav.dropdown-nav').toggleClass('show');
+};
 
-export { openNavListener, searchListener };
+export { openSidebarListener, openChartListener, pageLoad };
 
 
 /* <div class="home-card d-flex">

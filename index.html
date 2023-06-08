@@ -25,12 +25,12 @@
             <div class="menus col-3 row d-flex align-items-center">
                 <a class="col nav-muted nav-button"><img src="../img/pseudo.png" alt=""></a>
                 <a class="col nav-muted nav-button"><img src="../img/search.png" alt=""></a>
-                <a class="col nav-muted nav-button"><img src="../img/keranjang.png" alt=""></a>
-                <a class="col nav-button openNav"><img src="../img/garistiga.png" alt="">
+                <a class="col nav-muted nav-button openChart"><img src="../img/keranjang.png" alt=""></a>
+                <a class="col-3 nav-button openSidebar"><img src="../img/garistiga.png" alt="">
                 </a>
             </div>
         </div>
-        <ul class="sidebar text-center p-3">
+        <ul id="sidebar-nav" class="dropdown-nav text-center">
             <li class="sidebar-top">
                 <ul class="d-block p-0">
                     <li><a href="#" class="active">Home</a></li>
@@ -40,40 +40,47 @@
                 </ul>
                 <hr>
             </li>
-            <li id="account" class="sidebar-bottom"> 
+            <li id="account" class="sidebar-bottom">
                 <ul class="d-block p-0">
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Sign up</a></li>
                 </ul>
             </li>
         </ul>
+        <ul id="chart-nav" class="dropdown-nav text-center">
+            <li>
+                <h5>Chart</h5>
+            </li>
+            <li class="">nothing a service</li>
+        </ul>
     </nav>
     <main>
-
-        <section id="one">
+        <section id="home-one">
             <img src="../img/3.jpg" class="img-fluid" alt="" id="one-img">
             <div id="one-content" class="container-fluid text-center">
-                <h4 class="h4-primary">Hello, We Are Steak House</h4>
-                <h3 class="h3-white">We Serve Quality Food</h3>
-                <p class="p1-white">Steak House is a restaurant, bar and coffee roastery located on Egypt. <br>We have
+                <h4 class="h4-primary size-48">Hello, We Are Steak House</h4>
+                <h3 class="h3-white size-56">We Serve Quality Food</h3>
+                <p class="p1-white size-20">Steak House is a restaurant, bar and coffee roastery located on Egypt.
+                    <br>We have
                     awesome recipes and the
                     most
-                    talented chefs in town! </p>
-                <button class="button hover">View Menu</button>
+                    talented chefs in town!
+                </p>
+                <button class="button hover size-18">View Menu</button>
             </div>
         </section>
-        <section id="two-content" class="container d-flex flex-column align-items-center text-center">
-            <h5 class="h5-primary">Hello Dear</h4>
-                <h4 class="h4-white">We Are Steak House!</h3>
-                    <p class="p2-white">Steak House has the perfect place to enjoy fine food and great cocktails with
+        <section id="home-two" class="container d-flex flex-column align-items-center text-center">
+            <h5 class="h5-primary size-28">Hello Dear</h4>
+                <h4 class="h4-white size-36">We Are Steak House!</h3>
+                    <p class="p2-white size-20">Steak House has the perfect place to enjoy fine food and great cocktails
+                        with
                         excellent service, in comfortable atmospheric surroundings. We have a soft dining room, combined
                         with an open kitchen, coffee take out bar and alovely awesome on site coffee roastery.</p>
         </section>
-        <section id="three-content">
-            <img src="../img/bg-menu-preview.png" class="" alt="">
-            <div class="home-menu mx-auto">
-                <div class="home-card d-flex">
-                    <div class="home-card-content col p-3">
+        <section id="home-three">
+            <div class="home-menu">
+                <div class="homeCard">
+                    <div class="homeCard-content col p-3">
                         <div class="p-3 text-center">
                             <span class="price">$45.95</span>
                             <h5 class="h5-homeCard">Grilled Fillet</h5>
@@ -84,28 +91,184 @@
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 8.png" class="home-card-img">
+                    <img src="../img/image 8.png" class="homeCard-img">
                 </div>
-                <div class="home-card d-flex">
-                    <div class="home-card-content p-3">
+                <div class="homeCard">
+                    <div class="homeCard-content p-3">
                         <div class="p-3 text-center">
                             <span class="price">$45.95</span>
                             <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="o">Pork fillet, ginger, garlic, honey,
+                            <p class="p-homeCard">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 2.png" class="home-card-img">
+                    <img src="../img/image 2.png" class="homeCard-img">
+                </div>
+                <div class="homeCard">
+                    <div class="homeCard-content col p-3">
+                        <div class="p-3 text-center">
+                            <span class="price">$45.95</span>
+                            <h5 class="h5-homeCard">Grilled Fillet</h5>
+                            <p class="">Pork fillet, ginger, garlic, honey,
+                                pepper & canola oil.creamy
+                                chesapeake crab dip with
+                                artichoke, baked and topped with
+                                cheddar cheese, with crusty bread.</p>
+                        </div>
+                    </div>
+                    <img src="../img/image 8.png" class="homeCard-img">
+                </div>
+                <div class="homeCard">
+                    <div class="homeCard-content col p-3">
+                        <div class="p-3 text-center">
+                            <span class="price">$45.95</span>
+                            <h5 class="h5-homeCard">Grilled Fillet</h5>
+                            <p class="">Pork fillet, ginger, garlic, honey,
+                                pepper & canola oil.creamy
+                                chesapeake crab dip with
+                                artichoke, baked and topped with
+                                cheddar cheese, with crusty bread.</p>
+                        </div>
+                    </div>
+                    <img src="../img/image 8.png" class="homeCard-img">
+                </div>
+                <div class="homeCard">
+                    <div class="homeCard-content col p-3">
+                        <div class="p-3 text-center">
+                            <span class="price">$45.95</span>
+                            <h5 class="h5-homeCard">Grilled Fillet</h5>
+                            <p class="">Pork fillet, ginger, garlic, honey,
+                                pepper & canola oil.creamy
+                                chesapeake crab dip with
+                                artichoke, baked and topped with
+                                cheddar cheese, with crusty bread.</p>
+                        </div>
+                    </div>
+                    <img src="../img/image 8.png" class="homeCard-img">
+                </div>
+                <div class="homeCard">
+                    <div class="homeCard-content col p-3">
+                        <div class="p-3 text-center">
+                            <span class="price">$45.95</span>
+                            <h5 class="h5-homeCard">Grilled Fillet</h5>
+                            <p class="">Pork fillet, ginger, garlic, honey,
+                                pepper & canola oil.creamy
+                                chesapeake crab dip with
+                                artichoke, baked and topped with
+                                cheddar cheese, with crusty bread.</p>
+                        </div>
+                    </div>
+                    <img src="../img/image 8.png" class="homeCard-img">
+                </div>
+                <div class="homeCard">
+                    <div class="homeCard-content col p-3">
+                        <div class="p-3 text-center">
+                            <span class="price">$45.95</span>
+                            <h5 class="h5-homeCard">Grilled Fillet</h5>
+                            <p class="">Pork fillet, ginger, garlic, honey,
+                                pepper & canola oil.creamy
+                                chesapeake crab dip with
+                                artichoke, baked and topped with
+                                cheddar cheese, with crusty bread.</p>
+                        </div>
+                    </div>
+                    <img src="../img/image 8.png" class="homeCard-img">
+                </div>
+                <div class="homeCard">
+                    <div class="homeCard-content col p-3">
+                        <div class="p-3 text-center">
+                            <span class="price">$45.95</span>
+                            <h5 class="h5-homeCard">Grilled Fillet</h5>
+                            <p class="">Pork fillet, ginger, garlic, honey,
+                                pepper & canola oil.creamy
+                                chesapeake crab dip with
+                                artichoke, baked and topped with
+                                cheddar cheese, with crusty bread.</p>
+                        </div>
+                    </div>
+                    <img src="../img/image 8.png" class="homeCard-img">
                 </div>
             </div>
         </section>
+        <section class="home-four d-flex justify-content-center">
+            <div class="reviewer container text-center size-18">
+                <p class="message mx-auto"></p>
+                <figure>
+                    <img class="rounded-circle my-3" src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="home-five  d-flex justify-content-center p-5">
+            <div class="bg-light p-5" style="width: 70vw;">
+                <h3 class="text-dark text-center">Book Your Table</h3>
+                <p class="text-dark text-center">You can Book a table online easily in just a couple of minutes. We take
+                    reservations for
+                    lunch and dinner, just check the availability of your table & book it now!</p>
+                <form class="row ">
+                    <div class="col-6 mb-3">
+                        <label for="name" class="text-dark form-label">name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="location" class="text-dark form-label">Location</label>
+                        <input type="text" class="form-control" id="location">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="numberPeople" class="text-dark form-label">Number of People</label>
+                        <input type="number" class="form-control" id="numberPeople">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="time" class="text-dark form-label">Time</label>
+                        <input type="time" class="form-control" id="time">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button class="btn btn-success" style="width: 100%;">Buy a table</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div id="footer-content" class="row d-flex align-items-center p-5">
+            <div class="col-4 text-center d-flex flex-column justify-content-center align-items-center">
+                <h6 class="mb-3">Follow Us</h6>
+                <div class="row">
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/facebook.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/instagram.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/owl.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/pinterest.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/twitter.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="col-4 mx-3 text-center">
+                <h4>Steak House</h4>
+                <p class="description">Steak House has the perfect place to enjoy fine food and
+                    great cocktails with excellent service, in comfortable
+                    atmospheric surroundings. We have a soft dining room,
+                    combined with an open kitchen, coffee take out bar.</p>
+            </div>
+            <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+                <h6 class="mb-3">Newsletter</h6>
+                <form action="" class="d-flex align-items-center">
+                    <input placeholder="subscribe our Newsletter" class="text-light" style="width: 200px;"
+                        type="text"><button>JOIN</button>
+                </form>
+            </div>
+        </div>
+        <div class="p-3">
+            <p class="copyright text-center d-flex flex-column justify-content-center align-items-center">ESQ Business
+                School, Cilandak - 01 2345678910 - SteakHouse@gmail.com</p>
+            <p class="copyright text-center d-flex flex-column justify-content-center align-items-center">© 2023 Steak
+                House</p>
+        </div>
+
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

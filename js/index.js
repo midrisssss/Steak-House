@@ -1,19 +1,8 @@
-// import { openNavListener, searchListener } from "./handler.js";
+import { openSidebarListener, openChartListener, pageLoad } from './handler.js';
 
 $(document).ready(function () {
-  $('.openNav').click(function () {
-    $('.sidebar').toggleClass('show');
-  });
+  pageLoad();
+  $('.openSidebar').click(openSidebarListener);
+  $('.openChart').click(openChartListener);
 });
 
-// <ul id="account">
-// <li><a href="#">userName</a></li>
-// <li><a href="#">Checkout</a></li>
-// <li><a href="#">my Service</a></li>
-// </ul>
-// </li>
-
-
-// show => munculin sidebar
-
-// !show => tidak ada sidebar
