@@ -12,17 +12,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body class="padding-0">
     <nav class="container-fluid d-flex justify-content-center p-4">
         <div id="nav-content" class="container row d-flex align-items-center justify-content-between">
-            <div class="col"><a href="" id="nav-brand">Steak House</a></div>
+            <div class="col"><a href="" class="family-yesteryear size-36">Steak House</a></div>
             <div class="col-6 d-flex justify-content-center">
                 <div class="col"><a href="#" class="active nav-muted">Home</a></div>
-                <div class="col"><a href="#" class="nav-muted">Menu</a></div>
+                <div class="col"><a href="menu.html" class="nav-muted">Menu</a></div>
                 <div class="col"><a href="#" class="nav-muted">Book A Table</a></div>
                 <div class="col"><a href="#" class="nav-muted">About</a></div>
             </div>
-            <div class="menus col-3 row d-flex align-items-center">
+            <div class="nav-menus col-3 row d-flex align-items-center">
                 <a class="col nav-muted nav-button"><img src="../img/pseudo.png" alt=""></a>
                 <a class="col nav-muted nav-button"><img src="../img/search.png" alt=""></a>
                 <a class="col nav-muted nav-button openChart"><img src="../img/keranjang.png" alt=""></a>
@@ -30,11 +30,11 @@
                 </a>
             </div>
         </div>
-        <ul id="sidebar-nav" class="dropdown-nav text-center">
+        <ul id="nav-sidebar" class="nav-dropdown padding-20 text-center">
             <li class="sidebar-top">
                 <ul class="d-block p-0">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="menu.html">Menu</a></li>
                     <li><a href="#">Book A Table</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
@@ -47,44 +47,45 @@
                 </ul>
             </li>
         </ul>
-        <ul id="chart-nav" class="dropdown-nav text-center">
+        <ul id="nav-chart" class="nav-dropdown text-center">
             <li>
                 <h5>Chart</h5>
             </li>
             <li class="">nothing a service</li>
         </ul>
     </nav>
-    <main>
-        <section id="home-one">
-            <img src="../img/3.jpg" class="img-fluid" alt="" id="one-img">
-            <div id="one-content" class="container-fluid text-center">
-                <h4 class="h4-primary size-48">Hello, We Are Steak House</h4>
-                <h3 class="h3-white size-56">We Serve Quality Food</h3>
-                <p class="p1-white size-20">Steak House is a restaurant, bar and coffee roastery located on Egypt.
+    <main class="padding-20">
+        <section id="hero-section">
+            <img src="../img/3.jpg" class="img-fluid" alt="" id="hero-img">
+            <div id="hero-content" class="container-fluid text-center">
+                <h4 class="family-ruthie color-primary size-48">Hello, We Are Steak House</h4>
+                <h3 class="family-abril size-56">We Serve Quality Food</h3>
+                <p class="size-20">Steak House is a restaurant, bar and coffee roastery located on Egypt.
                     <br>We have
                     awesome recipes and the
                     most
                     talented chefs in town!
                 </p>
-                <button class="button hover size-18">View Menu</button>
+                <a href="menu.html" class="button hover size-18">View Menu</a>
             </div>
         </section>
-        <section id="home-two" class="container d-flex flex-column align-items-center text-center">
-            <h5 class="h5-primary size-28">Hello Dear</h4>
-                <h4 class="h4-white size-36">We Are Steak House!</h3>
-                    <p class="p2-white size-20">Steak House has the perfect place to enjoy fine food and great cocktails
-                        with
-                        excellent service, in comfortable atmospheric surroundings. We have a soft dining room, combined
-                        with an open kitchen, coffee take out bar and alovely awesome on site coffee roastery.</p>
+        <section id="home-two" class="container d-flex flex-column align-items-center text-center padding-100">
+            <h5 class="color-primary family-ruthie size-28 line-height-20">Hello Dear</h5>
+            <h4 class="family-abril size-36">We Are Steak House!</h4>
+            <div class="my-3 circle"></div>
+            <p class="p2-white size-16">Steak House has the perfect place to enjoy fine food and great cocktails
+                with
+                excellent service, in comfortable atmospheric surroundings. We have a soft dining room, combined
+                with an open kitchen, coffee take out bar and alovely awesome on site coffee roastery.</p>
         </section>
         <section id="home-three">
             <div class="home-menu">
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
                         <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="">Pork fillet, ginger, garlic, honey,
+                            <span class="color-primary size-12">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
@@ -96,9 +97,9 @@
                 <div class="homeCard">
                     <div class="homeCard-content p-3">
                         <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="p-homeCard">Pork fillet, ginger, garlic, honey,
+                            <span class="color-primary size-12">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
@@ -110,9 +111,9 @@
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
                         <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="">Pork fillet, ginger, garlic, honey,
+                            <span class="color-primary size-12">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
@@ -124,9 +125,9 @@
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
                         <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="">Pork fillet, ginger, garlic, honey,
+                            <span class="color-primary size-12">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
@@ -138,9 +139,23 @@
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
                         <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="">Pork fillet, ginger, garlic, honey,
+                            <span class="color-primary size-12">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
+                                pepper & canola oil.creamy
+                                chesapeake crab dip with
+                                artichoke, baked and topped with
+                                cheddar cheese, with crusty bread.</p>
+                        </div>
+                    </div>
+                    <img src="../img/image 8.png" class="homeCard-img">
+                </div>
+                <div class="homeCard">
+                    <div class="homeCard-content size-12 col p-3">
+                        <div class="p-3 text-center">
+                            <span class="color-primary size-16">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
@@ -152,9 +167,9 @@
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
                         <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="">Pork fillet, ginger, garlic, honey,
+                            <span class="color-primary size-12">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
@@ -166,23 +181,9 @@
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
                         <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="">Pork fillet, ginger, garlic, honey,
-                                pepper & canola oil.creamy
-                                chesapeake crab dip with
-                                artichoke, baked and topped with
-                                cheddar cheese, with crusty bread.</p>
-                        </div>
-                    </div>
-                    <img src="../img/image 8.png" class="homeCard-img">
-                </div>
-                <div class="homeCard">
-                    <div class="homeCard-content col p-3">
-                        <div class="p-3 text-center">
-                            <span class="price">$45.95</span>
-                            <h5 class="h5-homeCard">Grilled Fillet</h5>
-                            <p class="">Pork fillet, ginger, garlic, honey,
+                            <span class="color-primary size-12">$45.95</span>
+                            <h5 class="size-16">Grilled Fillet</h5>
+                            <p class="size-12">Pork fillet, ginger, garlic, honey,
                                 pepper & canola oil.creamy
                                 chesapeake crab dip with
                                 artichoke, baked and topped with
@@ -194,48 +195,49 @@
             </div>
         </section>
         <section class="home-four d-flex justify-content-center">
-            <div class="reviewer container text-center size-18">
-                <p class="message mx-auto"></p>
+            <div class="reviewer container text-center size-16">
+                <p class="message text-center"></p>
                 <figure>
                     <img class="rounded-circle my-3" src="" alt="">
-                    <figcaption></figcaption>
+                    <figcaption class="italic"></figcaption>
                 </figure>
             </div>
         </section>
         <section class="home-five  d-flex justify-content-center p-5">
             <div class="bg-light p-5" style="width: 70vw;">
-                <h3 class="text-dark text-center">Book Your Table</h3>
-                <p class="text-dark text-center">You can Book a table online easily in just a couple of minutes. We take
+                <h3 class="text-dark text-center family-abril">Book Your Table</h3>
+                <p class="text-dark text-center size-16">You can Book a table online easily in just a couple of minutes.
+                    We take
                     reservations for
                     lunch and dinner, just check the availability of your table & book it now!</p>
                 <form class="row ">
                     <div class="col-6 mb-3">
-                        <label for="name" class="text-dark form-label">name</label>
+                        <label for="name" class="text-dark form-label size-16">name</label>
                         <input type="text" class="form-control" id="name">
                     </div>
                     <div class="col-6 mb-3">
-                        <label for="location" class="text-dark form-label">Location</label>
+                        <label for="location" class="text-dark form-label size-16">Location</label>
                         <input type="text" class="form-control" id="location">
                     </div>
                     <div class="col-6 mb-3">
-                        <label for="numberPeople" class="text-dark form-label">Number of People</label>
+                        <label for="numberPeople" class="text-dark form-label size-16">Number of People</label>
                         <input type="number" class="form-control" id="numberPeople">
                     </div>
                     <div class="col-6 mb-3">
-                        <label for="time" class="text-dark form-label">Time</label>
+                        <label for="time" class="text-dark form-label size-16">Time</label>
                         <input type="time" class="form-control" id="time">
                     </div>
                     <div class="col-12 mt-3">
-                        <button class="btn btn-success" style="width: 100%;">Buy a table</button>
+                        <button type="submit" class="btn btn-success" style="width: 100%;">Buy a table</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
     <footer>
-        <div id="footer-content" class="row d-flex align-items-center p-5">
+        <div id="footer-content" class="row d-flex flex-nowrap align-items-center p-5">
             <div class="col-4 text-center d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-3">Follow Us</h6>
+                <h6 class="mb-3 color-fourmary size-16">Follow Us</h6>
                 <div class="row">
                     <a class="col social-media-footer" href="#"><img src="./img/social-media/facebook.svg" alt=""></a>
                     <a class="col social-media-footer" href="#"><img src="./img/social-media/instagram.svg" alt=""></a>
@@ -245,24 +247,26 @@
                 </div>
             </div>
             <div class="col-4 mx-3 text-center">
-                <h4>Steak House</h4>
-                <p class="description">Steak House has the perfect place to enjoy fine food and
+                <h4 class="size-48 family-yesteryear mb-4">Steak House</h4>
+                <p class="description size-16">Steak House has the perfect place to enjoy fine food and
                     great cocktails with excellent service, in comfortable
                     atmospheric surroundings. We have a soft dining room,
                     combined with an open kitchen, coffee take out bar.</p>
             </div>
             <div class="col-4 d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-3">Newsletter</h6>
+                <h6 class="mb-3 color-fourmary size-16">Newsletter</h6>
                 <form action="" class="d-flex align-items-center">
-                    <input placeholder="subscribe our Newsletter" class="text-light" style="width: 200px;"
+                    <input placeholder="subscribe our Newsletter" class="text-light size-12" style="width: 200px;"
                         type="text"><button>JOIN</button>
                 </form>
             </div>
         </div>
         <div class="p-3">
-            <p class="copyright text-center d-flex flex-column justify-content-center align-items-center">ESQ Business
+            <p class="text-center d-flex flex-column justify-content-center align-items-center color-fivemary size-12">
+                ESQ Business
                 School, Cilandak - 01 2345678910 - SteakHouse@gmail.com</p>
-            <p class="copyright text-center d-flex flex-column justify-content-center align-items-center">© 2023 Steak
+            <p class="text-center d-flex flex-column justify-content-center align-items-center color-fivemary size-12">©
+                2023 Steak
                 House</p>
         </div>
 

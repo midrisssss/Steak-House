@@ -1,65 +1,67 @@
-const menu = [{
+let id = 1;
+
+const menu = {
     breakfast: [
         {
-            id: 001,
+            id: id++,
             name: "Grilled Fillet",
             price: 12.95,
-            img: "",
+            img: "../img/menu/breakfast/image 1.png",
             fill: "Eggs, bacon and cherry-tomatoes with bread",
             description: "hot soto is apa gituh",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
         }, {
-            id: 002,
+            id: id++,
             name: "Alder grilled seafood paella",
             price: 19.95,
-            img: "",
+            img: "../img/menu/breakfast/image 2.png",
             fill: "Oat granola with fresh blueberries, almond, yogurt",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
         }, {
-            id: 003,
+            id: id++,
             name: "Chicken Breast",
             price: 14.95,
-            img: "",
+            img: "../img/menu/breakfast/image 3.png",
             fill: "Applewood smoked bacon,tomatoes & green",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
         }, {
-            id: 004,
+            id: id++,
             name: "Sea Trout",
             price: 15.95,
-            img: "",
+            img: "../img/menu/breakfast/image 4.png",
             fill: "Salmon, butter, lemon juice, onion, garlic & salad",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
         }, {
-            id: 005,
+            id: id++,
             name: "Sea Trout",
             price: 15.95,
-            img: "",
+            img: "../img/menu/breakfast/image 5.png",
             fill: "Salmon, butter, lemon juice, onion, garlic & salad",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -67,13 +69,13 @@ const menu = [{
             },
 
         }, {
-            id: 006,
+            id: id++,
             name: "Roasted Steak Roulade",
             price: 20.95,
-            img: "",
+            img: "../img/menu/breakfast/image 6.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -83,39 +85,39 @@ const menu = [{
     ],
     lunch: [
         {
-            id: 007,
+            id: id++,
             name: "Meat Ball Soup",
             price: 12.95,
-            img: "",
+            img: "../img/menu/lunch/image 7.png",
             fill: "Eggs, bacon and cherry-tomatoes with bread",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
         }, {
-            id: 008,
+            id: id++,
             name: "Grilled American Fillet",
             price: 19.95,
-            img: "",
+            img: "../img/menu/lunch/image 8.png",
             fill: "Oat granola with fresh blueberries, almond, yogurt",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
         }, {
-            id: 009,
+            id: id++,
             name: "Grilled Seafood paella",
             price: 14.95,
-            img: "",
+            img: "../img/menu/lunch/image 9.png",
             fill: "Applewood smoked bacon, tomatoes & green",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -123,13 +125,13 @@ const menu = [{
             },
 
         }, {
-            id: 010,
+            id: id++,
             name: "Roast Sea trout",
             price: 15.95,
-            img: "",
+            img: "../img/menu/lunch/image 10.png",
             fill: "Salmon, butter, lemon juice, onion, garlic & salad",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -137,13 +139,13 @@ const menu = [{
             },
 
         }, {
-            id: 011,
+            id: id++,
             name: "Smoked paprika hum",
             price: 12.95,
-            img: "",
+            img: "../img/menu/lunch/image 11.png",
             fill: "Baguette, basil, arugula, olives, cherry-tomatoes",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -151,13 +153,13 @@ const menu = [{
             },
 
         }, {
-            id: 012,
+            id: id++,
             name: "Oyster with hot sauce",
             price: 20.95,
-            img: "",
+            img: "../img/menu/lunch/image 12.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -165,13 +167,13 @@ const menu = [{
             },
 
         }, {
-            id: 013,
+            id: id++,
             name: "Meat Ball Soup",
             price: 20.95,
-            img: "",
+            img: "../img/menu/lunch/image 13.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -179,13 +181,13 @@ const menu = [{
             },
 
         }, {
-            id: 014,
+            id: id++,
             name: "Grilled American fillet",
             price: 20.95,
-            img: "",
+            img: "../img/menu/lunch/image 14.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -193,13 +195,13 @@ const menu = [{
             },
 
         }, {
-            id: 015,
+            id: id++,
             name: "Roast Sea Trout",
             price: 16.95,
-            img: "",
+            img: "../img/menu/lunch/image 15.png",
             fill: "Salmon, butter, lemon juice, onion, garlic & salad",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -207,13 +209,13 @@ const menu = [{
             },
 
         }, {
-            id: 016,
+            id: id++,
             name: "Roast Sea Trout",
             price: 20.95,
-            img: "",
+            img: "../img/menu/lunch/image 16.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -221,13 +223,13 @@ const menu = [{
             },
 
         }, {
-            id: 017,
+            id: id++,
             name: "Smoked Paprika Hum",
             price: 20.95,
-            img: "",
+            img: "../img/menu/lunch/image 17.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -235,13 +237,13 @@ const menu = [{
             },
 
         }, {
-            id: 018,
+            id: id++,
             name: "Oyster with hot sauce",
             price: 20.95,
-            img: "",
+            img: "../img/menu/lunch/image 18.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -251,78 +253,78 @@ const menu = [{
     ],
     dinner: [
         {
-            id: 019,
+            id: id++,
             name: "Grilled fillet",
             price: 12.95,
-            img: "",
+            img: "../img/menu/dinner/image 19.png",
             fill: "eggs, bacon and cherry-tomotoes with bread",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 020,
+        }, {
+            id: id++,
             name: "Alder Grilled Seafood Paella",
             price: 19.95,
-            img: "",
+            img: "../img/menu/dinner/image 20.png",
             fill: "Oat granota with fresh blueberries almond, yogurt",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 021,
+        }, {
+            id: id++,
             name: "Chicken Breast",
             price: 14.95,
-            img: "",
+            img: "../img/menu/dinner/image 21.png",
             fill: "Applewood smoked bacon, tomatoes & green",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 022,
+        }, {
+            id: id++,
             name: "Sea Trout",
             price: 15.95,
-            img: "",
+            img: "../img/menu/dinner/image 22.png",
             fill: "Salmon, butter, lemon juice, onion, garlic & salad",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 023,
+        }, {
+            id: id++,
             name: "Smoked paprika hummus",
             price: 12.95,
-            img: "",
+            img: "../img/menu/dinner/image 23.png",
             fill: "Baguette, basit, arugula, olives, cherry-tomatoes",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 024,
+        }, {
+            id: id++,
             name: "Roasted Steak Roulade",
             price: 20.95,
-            img: "",
+            img: "../img/menu/dinner/image 24.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -332,78 +334,78 @@ const menu = [{
     ],
     dessert: [
         {
-            id: 025,
+            id: id++,
             name: "Beautiful Homemade Croissonts",
             price: 12.95,
-            img: "",
+            img: "../img/menu/dessert/image 25.png",
             fill: "Eggs, Bacon, Cherry-tomatoes with Bread",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 026,
+        }, {
+            id: id++,
             name: "Blueberry Sweet Rolls",
             price: 19.95,
-            img: "",
+            img: "../img/menu/dessert/image 26.png",
             fill: "Oat Granola with Fresh Blueberries, Almond, yogurt",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 027,
+        }, {
+            id: id++,
             name: "Traditional Pancakes",
             price: 14.95,
-            img: "",
+            img: "../img/menu/dessert/image 27.png",
             fill: "Applewood Smoked Bacon, Tomatoes, Green",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 028,
+        }, {
+            id: id++,
             name: "Chocolate Cherry Cake",
             price: 15.95,
-            img: "",
+            img: "../img/menu/dessert/image 28.png",
             fill: "Salmon, Butter, Lemon Juice, Onion, Garlic, Salad",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 029,
+        }, {
+            id: id++,
             name: "Pain Au Chocalat",
             price: 12.95,
-            img: "",
+            img: "../img/menu/dessert/image 29.png",
             fill: "Boguette, Basil, Arugula, Alives, Cherry Tomatoes",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 030,
+        }, {
+            id: id++,
             name: "Cannoli with Cream Cheese",
             price: 20.95,
-            img: "",
+            img: "../img/menu/dessert/image 30.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -413,78 +415,78 @@ const menu = [{
     ],
     drink: [
         {
-            id: 031,
+            id: id++,
             name: "Cappuccino Coffe",
             price: 12.95,
-            img: "",
+            img: "../img/menu/drink/image 31.png",
             fill: "Eggs, Bacon, Cherry-tomatoes with Bread",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 032,
+        }, {
+            id: id++,
             name: "Caffe Macchiato",
             price: 19.95,
-            img: "",
+            img: "../img/menu/drink/image 32.png",
             fill: "Oat Granola with Fresh Blueberries, Almond, yogurt",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 033,
+        }, {
+            id: id++,
             name: "Dark Coffe",
             price: 14.95,
-            img: "",
+            img: "../img/menu/drink/image 33.png",
             fill: "Applewood Smoked Bacon, Tomatoes, Green",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 034,
+        }, {
+            id: id++,
             name: "Espresso Coffe",
             price: 15.95,
-            img: "",
+            img: "../img/menu/drink/image 34.png",
             fill: "Salmon, Butter, Lemon Juice, Onion, Garlic, Salad",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 035,
+        }, {
+            id: id++,
             name: "Coffee Latte",
             price: 12.95,
-            img: "",
+            img: "../img/menu/drink/image 35.png",
             fill: "Boguette, Basil, Arugula, Alives, Cherry Tomatoes",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
                 numberItem: "60-MTE"
             },
-        },{
-            id: 030,
+        }, {
+            id: id++,
             name: "Coffe And Strawberry Jam",
             price: 20.95,
-            img: "",
+            img: "../img/menu/drink/image 36.png",
             fill: "Croissants with strawberries, mascarpone, honey",
             description: "",
-            detail: { 
+            detail: {
                 weight: "23.98 pounds",
                 dimensions: "12cmX13cmX43cm",
                 chef: "idris",
@@ -492,4 +494,6 @@ const menu = [{
             },
         }
     ],
-}];
+};
+
+export { menu };
