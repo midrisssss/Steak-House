@@ -19,8 +19,8 @@
             <div class="col-6 d-flex justify-content-center">
                 <div class="col"><a href="#" class="active nav-muted">Home</a></div>
                 <div class="col"><a href="menu.html" class="nav-muted">Menu</a></div>
-                <div class="col"><a href="#" class="nav-muted">Book A Table</a></div>
-                <div class="col"><a href="#" class="nav-muted">About</a></div>
+                <div class="col"><a href="bookATable.html" class="nav-muted">Book A Table</a></div>
+                <div class="col"><a href="about.html" class="nav-muted">About</a></div>
             </div>
             <div class="nav-menus col-3 row d-flex align-items-center">
                 <a class="col nav-muted nav-button"><img src="../img/pseudo.png" alt=""></a>
@@ -35,13 +35,13 @@
                 <ul class="d-block p-0">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="#">Book A Table</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="bookATable.html">Book A Table</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
                 <hr>
             </li>
             <li id="account" class="sidebar-bottom">
-                <ul class="d-block p-0">
+                <ul id="account-null" class="d-block p-0">
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Sign up</a></li>
                 </ul>
@@ -217,15 +217,21 @@
                     </div>
                     <div class="col-6 mb-3">
                         <label for="location" class="text-dark form-label size-16">Location</label>
-                        <input type="text" class="form-control" id="location">
+                        <select name="location" id="location" class="form-control">
+                            <option value="" disabled selected>location</option>
+                        </select>
                     </div>
                     <div class="col-6 mb-3">
                         <label for="numberPeople" class="text-dark form-label size-16">Number of People</label>
-                        <input type="number" class="form-control" id="numberPeople">
+                        <select name="numberPeople" id="numberPeople" class="form-control">
+                            <option value="" disabled selected>Number of People</option>
+                        </select>
                     </div>
                     <div class="col-6 mb-3">
                         <label for="time" class="text-dark form-label size-16">Time</label>
-                        <input type="time" class="form-control" id="time">
+                        <select name="time" id="time" class="form-control">
+                            <option value="" disabled selected>time</option>
+                        </select>
                     </div>
                     <div class="col-12 mt-3">
                         <button type="submit" class="btn btn-success" style="width: 100%;">Buy a table</button>

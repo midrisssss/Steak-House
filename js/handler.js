@@ -1,4 +1,4 @@
-import { review } from './review.js';
+import { review, location, time, people, faqs } from './sh-profile.js';
 import { menu } from './menu.js';
 
 function pageLoad() {
@@ -7,6 +7,25 @@ function pageLoad() {
   $('.reviewer figcaption').text(review[0].name);
 
   pageMenu(0);
+  for (let index = 0; index < location.length; index++) {
+    let opt = "<option value='" + location[index] + "' class='text-dark'>" + location[index] + "</option>";
+    $('#location').append(opt);
+  }
+  for (let index = 0; index < time.length; index++) {
+    let opt = "<option value='" + time[index] + "' class='text-dark'>" + time[index] + "</option>";
+    $('#time').append(opt);
+  }
+  for (let index = 0; index < people.length; index++) {
+    let opt = "<option value='" + people[index] + "' class='text-dark'>" + people[index] + "</option>";
+    $('#numberPeople').append(opt);
+  }
+  for (let index = 0; index < faqs.length; index++) {
+    let h5 = "<h5 class=\"faqs-question p-2 size-16 dotted-primary\">" + faqs[index].question + "</h5>";
+    let p = "<p class=\"faqs-answer p-2 size-12 dotted-primary\" style=\"display: none;\">" + faqs[index].answer + "</p>";
+    let wrapper = "<div id=\"" + faqs[index].id + "\" class=\"faqs-content col-12 p-0\">" + h5 + p + "</div>";
+
+    $('#faqs-contents').append(wrapper);
+  }
 }
 
 function openSidebarListener() {
@@ -59,7 +78,7 @@ function pageMenu(value) {
     let h6 = "<h6 class='size-16 color-primary'>$" + menu[category][index].price + "</h6>";
 
     let div = "<div class='card-body text-light p-2'>" + h5 + p + h6 + "</div>";
-    let card = "<div class='card bg-transparent border border-0'>" + cardImg + div + "</div>";
+    let card = "<div id='" + menu[category][index].id + "' class='card bg-transparent border border-0'>" + cardImg + div + "</div>";
     let wrapper = "<div class='col'>" + card + "</div>";
 
     $('#menu-' + category).append(wrapper);
@@ -73,21 +92,40 @@ function pageMenu(value) {
   $('#menu-breakfast').show();
 }
 
-export { openSidebarListener, openChartListener, pageLoad, pageMenu };
+function openProduct(id) {
+  let product;
+  if (id >= 0 && id <= 6) {
+    product = menu['breakfast'].filter((array) => array.id == id);
+    console.log(product);
+  } else if (id >= 7 && id <= 18) {
+    product = menu['lunch'].filter((array) => array.id == id);
+    console.log(product);
+  } else if (id >= 19 && id <= 24) {
+    product = menu['dinner'].filter((array) => array.id == id);
+    console.log(product);
+  } else if (id >= 25 && id <= 30) {
+    product = menu['dessert'].filter((array) => array.id == id);
+    console.log(product);
+  } else if (id >= 31 && id <= 36) {
+    product = menu['drink'].filter((array) => array.id == id);
+    console.log(product);
+  }
+  console.log(product[0].img);
+  $('.product-name').text(product[0].name);
+  $('img.product-img').attr('src', product[0].img);
+  $('.product-description').text(product[0].description);
+  $('#product-weight').text(product[0].detail['weight']);
+  $('#product-dimension').text(product[0].detail['dimensions']);
+  $('#product-chef').text(product[0].detail['chef']);
+  $('#product-number').text(product[0].detail['numberItem']);
+  $('#product-price').text('$' + product[0].price);
+  $('#product').addClass('show');
+  $('main>section>*:not(#product), footer').css({
+    "filter": 'blur(20px)',
+    "pointer-events": 'none',
+    "user-select": 'none'
+  })
+}
 
-
-/* <div class="home-card d-flex">
-<div class="home-card-content col p-3">
-  <div class="p-3 text-center">
-      <span class="price">$45.95</span>
-      <h5 class="h5-homeCard">Grilled Fillet</h5>
-      <p class="">Pork fillet, ginger, garlic, honey,
-          pepper & canola oil.creamy
-          chesapeake crab dip with
-          artichoke, baked and topped with
-          cheddar cheese, with crusty bread.</p>
-  </div>
-</div>
-<img src="../img/image 8.png" class="home-card-img">
-</div> */
+export { openSidebarListener, openChartListener, pageLoad, openProduct };
 

@@ -1,8 +1,9 @@
-import { openSidebarListener, openChartListener, pageLoad, pageMenu } from './handler.js';
+import { openSidebarListener, openChartListener, pageLoad, openProduct } from './handler.js';
 // import { menu } from './menu.js';
 
 $(document).ready(function () {
   pageLoad();
+
   $('.openSidebar').click(openSidebarListener);
   $('.openChart').click(openChartListener);
   $('#tablink-0').on('click', function () {
@@ -35,4 +36,20 @@ $(document).ready(function () {
     $('.menu-content').hide();
     $('#menu-drink').show();
   });
+  $('.card').click(function () {
+    let id = this.id;
+    openProduct(id);
+  })
+  $('.product-close').click(function(){
+    $('#product').removeClass('show');
+    $('main>section>*:not(#product), footer').css({
+      "filter": 'blur(0px)',
+      "pointer-events": 'auto',
+      "user-select": 'auto'
+    })
+  })
+  $('.faqs-content').click(function () {
+    $('.faqs-answer').slideUp();
+    $('#'+ this.id +">.faqs-answer").slideToggle(500);
+  })
 });

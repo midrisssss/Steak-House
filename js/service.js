@@ -1,3 +1,3 @@
 const service = [];
 
-export default service;
+export { service };
