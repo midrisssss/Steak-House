@@ -41,9 +41,9 @@
                 <hr>
             </li>
             <li id="account" class="sidebar-bottom">
-                <ul class="d-block p-0">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign up</a></li>
+                <ul id="account-null" class="d-block p-0">
+                    <li><a href="#" class="loginBtn">Login</a></li>
+                    <li><a href="#" class="signUpBtn">Sign up</a></li>
                 </ul>
             </li>
         </ul>
@@ -123,11 +123,11 @@
                     <h3 id="product-price" class="col-6 color-primary size-28">$45.95</h3>
                     <div class="col-6 row d-flex align-items-center justify-content-end">
                         <div class="col-6 d-flex justify-content-around align-items-baseline size-16">
-                            <button class="minus bg-transparent color-primary p-1 rounded">-</button>
-                            <p class="calc">0</p>
-                            <button class="plus bg-transparent color-primary p-1 rounded">+</button>
+                            <button id="minus" class="bg-transparent color-primary p-1 rounded">-</button>
+                            <p id="quantity">0</p>
+                            <button id="plus" class="bg-transparent color-primary p-1 rounded">+</button>
                         </div>
-                        <button class="col-6 button hover size-16">Add Menu</button>
+                        <button class="col-6 button hover size-16">Add to Chart</button>
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                 <h6 class="mb-3 color-fourmary size-16">Newsletter</h6>
                 <form action="" class="d-flex align-items-center">
                     <input placeholder="subscribe our Newsletter" class="text-light size-12" style="width: 200px;"
-                        type="text"><button>JOIN</button>
+                        type="email"><button>JOIN</button>
                 </form>
             </div>
         </div>

@@ -1,5 +1,9 @@
 import { review, location, time, people, faqs } from './sh-profile.js';
 import { menu } from './menu.js';
+import { user, contactedUser, emailSubscription } from "./user.js";
+import { data } from './data.js';
+
+// let dataUser = [];
 
 function pageLoad() {
   $('.reviewer>.message').text(review[0].message);
@@ -26,6 +30,9 @@ function pageLoad() {
 
     $('#faqs-contents').append(wrapper);
   }
+  if (data.length == 0) {
+    loginSignUp();
+  }
 }
 
 function openSidebarListener() {
@@ -37,6 +44,62 @@ function openChartListener() {
   $('#nav-sidebar.nav-dropdown').removeClass('show');
   $('#nav-chart.nav-dropdown').toggleClass('show');
 };
+
+function loginSignUp() {
+  const login = "<section id='login' class='mx-auto my-auto padding-40 bg-dark width-80vw rounded'><div class='row d-flex'><h2 class='login-info col - 11 text - center'>Login</h2><div class='login-close col-1 text-end size-28 hover'>&times;</div></div><form action='' class='row container mx-auto my-3 width-100 g-4'><div class='col-12'><label for='name'>Name</label><input type='text' id='name-login' placeholder='Jhon Doe' class='form-control bg-transparent white-placeholder solid-primary text-light'></div><div class='col-12'><label for='password'>Password</label><input type='password' id='password-login' placeholder='your password' class='form-control bg-transparent white-placeholder solid-primary text-light'></div><div class='col-12'><button type='submit' id='login-submit' class='button-primary w-100 p-1'>Login</button></div><p class='col-12 text-center'>or</p><div class='col-12'><button type='button' class='signUpBtn button-transparent w-100 p-1'>Sign Up</button></div></form></section>";
+  const signUp = `<section id="signUp" class="mx-auto my-auto padding-40 bg-dark width-80vw rounded"><div class="row d-flex"><h2 class="signUp-info col-11 text-center">Sign Up</h2><div class="signUp-close col-1 text-end size-28 hover">&times;</div></div><form action="" class="row container mx-auto my-3 width-100 g-4"><div class="col-6"><label for="name">Name</label><input type="text" id="name-signUp" placeholder="John Doe" class="form-control bg-transparent white-placeholder solid-primary text-light"></div><div class="col-6"><label for="password">Password</label><input type="password" id="password-signUp" placeholder="your password" class="form-control bg-transparent white-placeholder solid-primary text-light"></div><div class="col-6"><label for="tel">Phone</label><input type="tel" id="phone-signUp" placeholder="your Phone" class="form-control bg-transparent white-placeholder solid-primary text-light"></div><div class="col-6"><label for="email">Email</label><input type="email" id="email-signUp" placeholder="ymuhammadidris@gmail.com" class="form-control bg-transparent white-placeholder solid-primary text-light"></div><div class="col-12"><button type="submit" id="signUp-submit" class="button-primary w-100 p-1">Sign Up</button></div><p class="col-12 text-center mb-0">or</p><div class="col-12"><button type="button" class="loginBtn button-transparent w-100 p-1">Login</button></div></form></section>`;
+
+  $('main').append(login, signUp);
+}
+
+function signUp() {
+  let name = $('#name-signUp').val();
+  let password = $('#password-signUp').val();
+  let tel = $('#phone-signUp').val();
+  let email = $('#email-signUp').val();
+
+  let dataUser = user.filter((u) => u.name == name);
+  if (dataUser.length == 0) {
+    user.push({ name, password, tel, email });
+    data.push(user[user.length - 1]);
+    console.log(user[1]);
+    alert("successfully sign up")
+    $('#name-signUp').val("");
+    $('#password-signUp').val("");
+    $('#phone-signUp').val("");
+    $('#email-signUp').val("");
+    $('#signUp').removeClass('show');
+    $('#account-null').attr('class', 'd-none');
+  } else {
+    $('#name-signUp').val("");
+    $('#password-signUp').val("");
+    $('#phone-signUp').val("");
+    $('#email-signUp').val("");
+    alert("Username is already taken!")
+  }
+}
+
+function login() {
+  let name = $('#name-login').val();
+  let password = $('#password-login').val();
+
+  let dataUser = user.filter((u) => u.name == name);
+
+  if (dataUser.length == 1 && dataUser[0].password == password) {
+    data.push(dataUser[0]);
+    $('#name-login').val("");
+    $('#password-login').val("");
+    alert("successfully login");
+    $('#login').removeClass('show');
+
+    $('#account-null').attr('class', 'd-none');
+    // console.log("data user" + JSON.stringify(dataUser));
+  } else {
+    $('#name-login').val("");
+    $('#password-login').val("");
+    alert("Invalid email or password!")
+  }
+}
 
 function pageMenu(value) {
   let category = "";
@@ -127,5 +190,20 @@ function openProduct(id) {
   })
 }
 
-export { openSidebarListener, openChartListener, pageLoad, openProduct };
+function addMenu() {
+  $('#plus').click(function () {
+    let quantity = $('#quantity').text();
+    $('#quantity').text(++quantity);
+  })
+}
+
+function substractMenu() {
+  $('#minus').click(function () {
+    let quantity = $('#quantity').text();
+    if (quantity > 0)
+      $('#quantity').text(--quantity);
+  })
+}
+
+export { openSidebarListener, openChartListener, pageLoad, openProduct, addMenu, substractMenu, signUp, login };
 

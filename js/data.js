@@ -1,0 +1,3 @@
+let data = [];
+
+export { data };
