@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Steak-House</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bg-light padding-0">
+    <nav class="container-fluid d-flex justify-content-center p-4">
+        <div id="nav-content" class="container row d-flex align-items-center justify-content-between">
+            <div class="col"><a href="" class="family-yesteryear size-36 color-secondary">Steak House</a></div>
+            <div class="col-6 d-flex justify-content-center">
+                <div class="col"><a href="index.html" class="nav-muted color-secondary">Home</a></div>
+                <div class="col"><a href="menu.html" class="nav-muted color-secondary">Menu</a></div>
+                <div class="col"><a href="bookATable.html" class="nav-muted color-secondary">Book A Table</a></div>
+                <div class="col"><a href="about.html" class="nav-muted color-secondary">About</a></div>
+            </div>
+            <div class="nav-menus col-3 row d-flex align-items-center">
+                <a class="col nav-muted nav-button"><img src="./img/pseudo hitam.png" alt=""></a>
+                <a class="col nav-muted nav-button"><img src="./img/search hitam.png" alt=""></a>
+                <a class="col nav-muted nav-button openChart"><img src="./img/keranjang hitam.png" alt=""></a>
+                <a class="col-3 nav-button openSidebar"><img src="./img/garis tiga hitam.png" alt="">
+                </a>
+            </div>
+        </div>
+        <ul id="nav-sidebar" class="nav-dropdown padding-20 text-center">
+            <li class="sidebar-top">
+                <ul class="d-block p-0">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="bookATable.html">Book A Table</a></li>
+                    <li><a href="#" class="active">About</a></li>
+                </ul>
+                <hr>
+            </li>
+            <li id="account" class="sidebar-bottom">
+                <ul id="account-null" class="d-block p-0">
+                    <li><a href="#" class="loginBtn">Login</a></li>
+                    <li><a href="#" class="signUpBtn">Sign up</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="nav-chart" class="nav-dropdown text-center">
+            <li>
+                <h5>Chart</h5>
+            </li>
+            <li class="">nothing a service</li>
+        </ul>
+    </nav>
+
+    <main class="padding-20">
+        <section id="hero-section">
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="./img/1.jpg" class="img-fluid rounded" alt=""
+                    style="height: 80vh; border-radius: 20%; opacity: 0.87;">
+            </div>
+            <div id="hero-content" class="container-fluid text-center">
+                <h4 class="family-ruthie color-primary size-48">Products</h4>
+                <h3 class="family-abril size-56">Checkout</h3>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="container card">
+                <div class="card-body">
+                  <h5 class="card-title">Address</h5>
+                  <div class="row">
+                    <div class="col"><p class="card-text" style="color:black ;">Megawati</p></div>
+                    <div class="col"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+                <div class="card-footer text-body-secondary">
+                  2 days ago
+                </div>
+              </div>
+            <!-- <div class="container card">
+                <div class="card">
+                    <p>Address</p>
+                    <div class="row">
+                        <div class="col"><p>Megawati</p></div>
+                        <div class="col"><button>Change Address</button></div>
+                    </div>
+                    <p>Jl. Megawati Soekarno Putri no.7 Jaya Indoenesia</p>
+                </div>
+            </div> -->
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-content" class="row d-flex flex-nowrap align-items-center p-5">
+            <div class="col-4 text-center d-flex flex-column justify-content-center align-items-center">
+                <h6 class="mb-3 color-fourmary size-16">Follow Us</h6>
+                <div class="row">
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/facebook.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/instagram.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/owl.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/pinterest.svg" alt=""></a>
+                    <a class="col social-media-footer" href="#"><img src="./img/social-media/twitter.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="col-4 mx-3 text-center">
+                <h4 class="size-48 family-yesteryear mb-4">Steak House</h4>
+                <p class="description size-16">Steak House has the perfect place to enjoy fine food and
+                    great cocktails with excellent service, in comfortable
+                    atmospheric surroundings. We have a soft dining room,
+                    combined with an open kitchen, coffee take out bar.</p>
+            </div>
+            <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+                <h6 class="mb-3 color-fourmary size-16">Newsletter</h6>
+                <form action="" class="d-flex align-items-center">
+                    <input placeholder="subscribe our Newsletter" class="text-light size-12" style="width: 200px;"
+                        type="email"><button>JOIN</button>
+                </form>
+            </div>
+        </div>
+        <div class="p-3">
+            <p class="text-center d-flex flex-column justify-content-center align-items-center color-fivemary size-12">
+                ESQ Business
+                School, Cilandak - 01 2345678910 - SteakHouse@gmail.com</p>
+            <p class="text-center d-flex flex-column justify-content-center align-items-center color-fivemary size-12">©
+                2023 Steak
+                House</p>
+        </div>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
