@@ -56,4 +56,6 @@ const faqs = [{
     answer: "You can contact Steak House through the telephone number listed on our website. You can also send a message through the contact form available on our website. Our team will be happy to assist in answering any questions or fulfilling your requests."
 }];
 
-export { review, location, time, people, faqs };
+let payment = ["BANK MANDIRI", "PAYPAL", "BANK BCA", "BANK BRI", "BANK BNI", "OVO", "DANA", "GOPAY"];
+
+export { review, location, time, people, faqs, payment };

@@ -17,7 +17,7 @@
         <div id="nav-content" class="container row d-flex align-items-center justify-content-between">
             <div class="col"><a href="" class="family-yesteryear size-36">Steak House</a></div>
             <div class="col-6 d-flex justify-content-center">
-                <div class="col"><a href="#" class="active nav-muted">Home</a></div>
+                <div class="col"><a href="account.html" class="active nav-muted">Home</a></div>
                 <div class="col"><a href="menu.html" class="nav-muted">Menu</a></div>
                 <div class="col"><a href="bookATable.html" class="nav-muted">Book A Table</a></div>
                 <div class="col"><a href="about.html" class="nav-muted">About</a></div>
@@ -41,8 +41,11 @@
                 <hr>
             </li>
             <li id="account" class="sidebar-bottom">
-                <!-- <ul id="account-notnull" class="d-block"></ul> -->
-                <ul id="account-null" class="d-block p-0">
+                <ul id="account-notnull" class="p-0" style="display: none;">
+                    <li><a href="account.html" id="user-name">username</a></li>
+                    <li id="user-checkout"><a href="checkout.html">Checkout</a></li>
+                </ul>
+                <ul id="account-null" class="p-0">
                     <li><a href="#" class="loginBtn">Login</a></li>
                     <li><a href="#" class="signUpBtn">Sign up</a></li>
                 </ul>
@@ -52,12 +55,12 @@
             <li>
                 <h5>Chart</h5>
             </li>
-            <li class="">nothing a service</li>
+            <li class="chart-items d-flex flex-column align-items-center">
+            </li>
         </ul>
     </nav>
 
     <main class="padding-20">
-
         <section id="hero-section">
             <img src="../img/3.jpg" class="img-fluid" alt="" id="hero-img">
             <div id="hero-content" class="container-fluid text-center">
@@ -95,7 +98,7 @@
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 8.png" class="homeCard-img">
+                    <img src="../img/image 1.png" class="homeCard-img">
                 </div>
                 <div class="homeCard">
                     <div class="homeCard-content p-3">
@@ -123,7 +126,7 @@
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 8.png" class="homeCard-img">
+                    <img src="../img/image 3.png" class="homeCard-img">
                 </div>
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
@@ -137,7 +140,7 @@
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 8.png" class="homeCard-img">
+                    <img src="../img/image 4.png" class="homeCard-img">
                 </div>
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
@@ -151,7 +154,7 @@
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 8.png" class="homeCard-img">
+                    <img src="../img/image 5.png" class="homeCard-img">
                 </div>
                 <div class="homeCard">
                     <div class="homeCard-content size-12 col p-3">
@@ -165,7 +168,7 @@
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 8.png" class="homeCard-img">
+                    <img src="../img/image 6.png" class="homeCard-img">
                 </div>
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
@@ -179,7 +182,7 @@
                                 cheddar cheese, with crusty bread.</p>
                         </div>
                     </div>
-                    <img src="../img/image 8.png" class="homeCard-img">
+                    <img src="../img/image 7.png" class="homeCard-img">
                 </div>
                 <div class="homeCard">
                     <div class="homeCard-content col p-3">
@@ -237,7 +240,7 @@
                         </select>
                     </div>
                     <div class="col-12 mt-3">
-                        <button type="submit" class="btn btn-success" style="width: 100%;">Buy a table</button>
+                        <button type="button" id="bookATable" class="btn btn-success" style="width: 100%;">Buy a table</button>
                     </div>
                 </form>
             </div>

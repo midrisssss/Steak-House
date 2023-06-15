@@ -1,9 +1,69 @@
 const user = [{
     userId: 1,
-    name: "muhammad idris",
-    password: "0041 0061 0001",
-    email: "muhammadidris15@gmail.com",
+    name: "steak house",
+    password: "12345",
+    email: "steakhouse@gmail.com",
     phone: "0829292929",
+    chart: [{
+        orderId: 1,
+        id: 1,
+        name: "Grilled Fillet",
+        price: 12.95,
+        img: "../img/menu/breakfast/image 1.png",
+        fill: "Eggs, bacon and cherry-tomatoes with bread",
+        description: "hot soto is apa gituh",
+        detail: {
+            weight: "23.98 pounds",
+            dimensions: "12cmX13cmX43cm",
+            chef: "idris",
+            numberItem: "60-MTE"
+        },
+        quantity: 2,
+        infoLocation: {
+            name: "idris",
+            location: "Japan",
+            phone: "012121212",
+        }
+    }, {
+        id: 23,
+        name: "Grilled American Fillet",
+        price: 19.95,
+        img: "../img/menu/lunch/image 8.png",
+        fill: "Oat granola with fresh blueberries, almond, yogurt",
+        description: "",
+        detail: {
+            weight: "23.98 pounds",
+            dimensions: "12cmX13cmX43cm",
+            chef: "idris",
+            numberItem: "60-MTE"
+        },
+        quantity: 1,
+        infoLocation: {
+            name: "idris",
+            location: "Japan",
+            phone: "012121212",
+        }
+    }, {
+        id: 27,
+        name: "Grilled Seafood paella",
+        price: 14.95,
+        img: "../img/menu/lunch/image 9.png",
+        fill: "Applewood smoked bacon, tomatoes & green",
+        description: "",
+        detail: {
+            weight: "23.98 pounds",
+            dimensions: "12cmX13cmX43cm",
+            chef: "idris",
+            numberItem: "60-MTE"
+        },
+        quantity: 3,
+        infoLocation: {
+            name: "idris",
+            location: "Japan",
+            phone: "012121212",
+        }
+
+    }],
     completedOrders: {
         table: [{
             orderId: 1,
@@ -28,7 +88,7 @@ const user = [{
             },
             quantity: 2,
             infoLocation: {
-                name: "idris",
+                name: "farhan",
                 location: "Japan",
                 phone: "012121212",
             }
@@ -37,11 +97,11 @@ const user = [{
     pendingOrders: {
         table: [{
             orderId: 1,
-            name: "idris",
+            name: "admin",
             location: "k=japan",
             people: 3,
             time: "10:00",
-        }, {}],
+        }],
         product: [{
             orderId: 1,
             id: 1,
@@ -58,7 +118,7 @@ const user = [{
             },
             quantity: 2,
             infoLocation: {
-                name: "idris",
+                name: "admin",
                 location: "Japan",
                 phone: "012121212",
             }

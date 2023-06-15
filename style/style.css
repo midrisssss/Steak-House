@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+.relative {
+  position: relative;
+}
+
 /* margin */
 .margin-0 {
   margin: 0;
@@ -141,6 +145,10 @@ body {
 }
 
 /* height */
+.height-30px {
+  height: 30px;
+}
+
 .height-100 {
   height: 100%;
 }
@@ -155,6 +163,10 @@ body {
 
 .height-100vh {
   height: 100vh;
+}
+
+.height-auto {
+  height: 0;
 }
 
 /* width */
@@ -305,6 +317,16 @@ hr {
 }
 
 /* sidebar-end */
+/* chart */
+.chart-item {
+  height: 60px;
+  width: 100%;
+}
+
+.line-height-0 {
+  line-height: 0;
+}
+
 /* navigation end */
 
 /* hero */
@@ -316,6 +338,12 @@ hr {
   opacity: 0.4;
   mix-blend-mode: lighten;
 }
+
+#hero-img-checkout {
+  opacity: 0.9;
+  mix-blend-mode: darken;
+}
+
 
 #hero-content {
   position: absolute;
@@ -384,9 +412,11 @@ hr {
   padding: 5px 30px;
   transition: all 400ms;
 }
+
 .button-primary {
   background-color: var(--primary);
 }
+
 .button-transparent {
   background-color: transparent;
 }
@@ -470,18 +500,18 @@ footer>div:nth-of-type(1) {
 }
 
 /* menu-html */
-.card:not(:hover) {
+.card-menu:not(:hover) {
   transition: all ease-in-out 0.4s;
 }
 
-.card:hover {
+.card-menu:hover {
   cursor: pointer;
   transform: translateY(-8px);
   transition: all ease-in-out 0.4s;
 }
 
 /* product */
-#product, #login, #signUp {
+#product, #login, #signUp, #address, #note {
   background-color: var(--secondary);
   opacity: 0;
   position: fixed;
@@ -491,10 +521,16 @@ footer>div:nth-of-type(1) {
   transition: all ease-in-out 0.5s;
 }
 
-#product.show, #login.show,  #signUp.show {
+#product.show, #login.show,  #signUp.show, #address.show, #note.show {
   opacity: 1;
   display: block;
   top: 15%;
+}
+
+#login,
+#signUp, #address, #note {
+  left: 30%;
+  width: 550px;
 }
 
 .padding-40 {
@@ -509,6 +545,7 @@ footer>div:nth-of-type(1) {
 .solid-primary {
   border: 2px solid var(--primary);
 }
+
 .dotted-primary {
   border: 2px dotted var(--primary);
 }
@@ -613,8 +650,12 @@ footer>div:nth-of-type(1) {
     order: 1;
   }
 
-  #product, #login, #signUp {
-    overflow-y: scroll;
+  #product,
+  #login,
+  #signUp, #address, #note {
+    left: 10%;
+    width: 80vw;
+    /* overflow-y: scroll; */
   }
 
   /* menu */
@@ -639,6 +680,15 @@ footer>div:nth-of-type(1) {
 
   #contactUs-content {
     flex-direction: column;
+  }
+  
+  #parent-changeAddress {
+    order: 4;
+    margin: 20px auto;
+  }
+  #change-address {
+    width: 100%;
+    font-size: 14px;
   }
 }
 

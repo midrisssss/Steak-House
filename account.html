@@ -3,30 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu | Steak-House</title>
+    <title>Checkout | Steak-House</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="padding-0">
-    <nav class="container-fluid d-flex justify-content-center p-4">
+<body class="bg-light padding-0">
+    <nav class="container-fluid relative d-flex justify-content-center p-4">
         <div id="nav-content" class="container row d-flex align-items-center justify-content-between">
-            <div class="col"><a href="" class="family-yesteryear size-36">Steak House</a></div>
+            <div class="col"><a href="" class="family-yesteryear size-36 color-secondary">Steak House</a></div>
             <div class="col-6 d-flex justify-content-center">
-                <div class="col"><a href="index.html" class="nav-muted">Home</a></div>
-                <div class="col"><a href="menu.html" class="nav-muted">Menu</a></div>
-                <div class="col"><a href="#" class="active nav-muted">Book A Table</a></div>
-                <div class="col"><a href="about.html" class="nav-muted">About</a></div>
+                <div class="col"><a href="index.html" class="nav-muted color-secondary">Home</a></div>
+                <div class="col"><a href="menu.html" class="nav-muted color-secondary">Menu</a></div>
+                <div class="col"><a href="bookATable.html" class="nav-muted color-secondary">Book A Table</a></div>
+                <div class="col"><a href="about.html" class="nav-muted color-secondary">About</a></div>
             </div>
             <div class="nav-menus col-3 row d-flex align-items-center">
-                <a class="col nav-muted nav-button"><img src="../img/pseudo.png" alt=""></a>
-                <a href="menu.html#product" class="col nav-muted nav-button"><img src="../img/search.png" alt=""></a>
-                <a class="col nav-muted nav-button openChart"><img src="../img/keranjang.png" alt=""></a>
-                <a class="col-3 nav-button openSidebar"><img src="../img/garistiga.png" alt="">
+                <a class="col nav-muted nav-button"><img src="./img/pseudo hitam.png" alt=""></a>
+                <a href="menu.html/#product" class="col nav-muted nav-button"><img src="./img/search hitam.png" alt=""></a>
+                <a class="col nav-muted nav-button openChart"><img src="./img/keranjang hitam.png" alt=""></a>
+                <a class="col-3 nav-button openSidebar"><img src="./img/garis tiga hitam.png" alt="">
                 </a>
             </div>
         </div>
@@ -35,14 +34,14 @@
                 <ul class="d-block p-0">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="#" class="active">Book A Table</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="bookATable.html">Book A Table</a></li>
+                    <li><a href="#" class="active">About</a></li>
                 </ul>
                 <hr>
             </li>
             <li id="account" class="sidebar-bottom">
                 <ul id="account-notnull" class="p-0" style="display: none;">
-                    <li><a href="account.html" id="user-name">username</a></li>
+                    <li><a href="#" id="user-name">username</a></li>
                     <li id="user-checkout"><a href="checkout.html">Checkout</a></li>
                 </ul>
                 <ul id="account-null" class="p-0">
@@ -55,70 +54,47 @@
             <li>
                 <h5>Chart</h5>
             </li>
-            <!-- <li class="">nothing a service</li> -->
+            <!-- <li class="chart-null d-none">nothing a service</li> -->
             <li class="chart-items d-flex flex-column align-items-center">
             </li>
         </ul>
     </nav>
+
     <main class="p-3">
-        <section id="hero-section">
-            <img src="../img/3.jpg" class="img-fluid" alt="" id="hero-img">
+        <section id="hero-section" class="hero-checkout d-flex align-item-center justify-content-center pt-3">
+            <!-- <div class="d-flex justify-content-center align-items-center"> -->
+            <img src="./img/1.jpg" class="img-fluid" id="hero-img-checkout" alt=""
+                style="width: 80vw; border-radius: 20px;">
+            <!-- </div> -->
             <div id="hero-content" class="container-fluid text-center">
-                <h4 class="family-ruthie color-primary size-48">Reservation</h4>
-                <h3 class="family-abril size-56">Book Your Table</h3>
-                <div class="main-navigation mt-4">
-                    <a href="index.html" class="">Home</a> / <a href="#" class="active">Book A Table</a>
+                <h4 class="family-ruthie color-primary size-48">Account</h4>
+                <h3 id="username" class="family-abril size-56"></h3>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="card container-fluid row mx-auto p-4" style="width: 80vw;">
+                <div class="card-body row p-5 container-fluid w-100">
+                    <h3 class="col-12">Information Account</h3>
+                    <div class="col-12 my-2">
+                        <p class="text-dark" id="account-name"></p>
+                    </div>
+                    <div class="col-12 my-2">
+                        <p class="text-dark" id="account-password"></p>
+                    </div>
+                    <div class="col-12 my-2">
+                        <p class="text-dark" id="account-email"></p>
+                    </div>
+                    <div class="col-12 my-2">
+                        <p class="text-dark" id="account-phone"></p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="container d-flex flex-column align-items-center text-center padding-100">
-            <h5 class="color-primary family-ruthie size-28 line-height-20">Start Eating Better</h5>
-            <h4 class="family-abril size-36">Daily New Fresh Meals</h4>
-            <div class="my-3 circle"></div>
-            <p class="size-16">Steak House has the perfect place to enjoy fine food and great cocktails
-                with
-                excellent service, in comfortable atmospheric surroundings. We have a soft dining room, combined
-                with an open kitchen, coffee take out bar and alovely awesome on site coffee roastery.</p>
-        </section>
 
-        <section class="home-five  d-flex justify-content-center p-5">
-            <div class="bg-light p-5" style="width: 70vw;">
-                <h3 class="text-dark text-center family-abril">Book Your Table</h3>
-                <p class="text-dark text-center size-16">You can Book a table online easily in just a couple of minutes.
-                    We take
-                    reservations for
-                    lunch and dinner, just check the availability of your table & book it now!</p>
-                <form class="row ">
-                    <div class="col-6 mb-3">
-                        <label for="name" class="text-dark form-label size-16">name</label>
-                        <input type="text" class="form-control" id="name">
-                    </div>
-                    <div class="col-6 mb-3">
-                        <label for="location" class="text-dark form-label size-16">Location</label>
-                        <select name="location" id="location" class="form-control">
-                            <option value="" disabled selected>location</option>
-                        </select>
-                    </div>
-                    <div class="col-6 mb-3">
-                        <label for="numberPeople" class="text-dark form-label size-16">Number of People</label>
-                        <select name="numberPeople" id="numberPeople" class="form-control">
-                            <option value="" disabled selected>Number of People</option>
-                        </select>
-                    </div>
-                    <div class="col-6 mb-3">
-                        <label for="time" class="text-dark form-label size-16">Time</label>
-                        <select name="time" id="time" class="form-control">
-                            <option value="" disabled selected>time</option>
-                        </select>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <button type="button" id="bookATable" class="btn btn-success" style="width: 100%;">Buy a table</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+
+
     </main>
-
     <footer>
         <div id="footer-content" class="row d-flex flex-nowrap align-items-center p-5">
             <div class="col-4 text-center d-flex flex-column justify-content-center align-items-center">
@@ -155,6 +131,7 @@
                 House</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="module" src="./js/index.js"></script>
 </body>

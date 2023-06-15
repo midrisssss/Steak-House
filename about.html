@@ -24,7 +24,7 @@
             </div>
             <div class="nav-menus col-3 row d-flex align-items-center">
                 <a class="col nav-muted nav-button"><img src="../img/pseudo.png" alt=""></a>
-                <a class="col nav-muted nav-button"><img src="../img/search.png" alt=""></a>
+                <a href="menu.html#product" class="col nav-muted nav-button"><img src="../img/search.png" alt=""></a>
                 <a class="col nav-muted nav-button openChart"><img src="../img/keranjang.png" alt=""></a>
                 <a class="col-3 nav-button openSidebar"><img src="../img/garistiga.png" alt="">
                 </a>
@@ -41,7 +41,11 @@
                 <hr>
             </li>
             <li id="account" class="sidebar-bottom">
-                <ul id="account-null" class="d-block p-0">
+                <ul id="account-notnull" class="p-0" style="display: none;">
+                    <li><a href="account.html" id="user-name">username</a></li>
+                    <li id="user-checkout"><a href="checkout.html">Checkout</a></li>
+                </ul>
+                <ul id="account-null" class="p-0">
                     <li><a href="#" class="loginBtn">Login</a></li>
                     <li><a href="#" class="signUpBtn">Sign up</a></li>
                 </ul>
@@ -51,7 +55,9 @@
             <li>
                 <h5>Chart</h5>
             </li>
-            <li class="">nothing a service</li>
+            <!-- <li class="">nothing a service</li> -->
+            <li class="chart-items d-flex flex-column align-items-center">
+            </li>
         </ul>
     </nav>
     <main class="p-3">
@@ -119,16 +125,20 @@
                 </div>
                 <form action="" class="row mx-auto my-3 width-40 g-4">
                     <div class="col-6">
-                        <input type="text" placeholder="First Name" class="form-control bg-transparent white-placeholder solid-primary text-light">
+                        <input type="text" placeholder="First Name"
+                            class="form-control bg-transparent white-placeholder solid-primary text-light">
                     </div>
                     <div class="col-6">
-                        <input type="text" placeholder="Last Name" class="form-control bg-transparent white-placeholder solid-primary text-light">
+                        <input type="text" placeholder="Last Name"
+                            class="form-control bg-transparent white-placeholder solid-primary text-light">
                     </div>
                     <div class="col-6">
-                        <input type="email" placeholder="Email" class="form-control bg-transparent white-placeholder solid-primary text-light">
+                        <input type="email" placeholder="Email"
+                            class="form-control bg-transparent white-placeholder solid-primary text-light">
                     </div>
                     <div class="col-6">
-                        <input type="tel" placeholder="Phone" class="form-control bg-transparent white-placeholder solid-primary text-light">
+                        <input type="tel" placeholder="Phone"
+                            class="form-control bg-transparent white-placeholder solid-primary text-light">
                     </div>
                     <div class="col-12">
                         <textarea name="" id="" cols="30" rows="10" placeholder="Message..."

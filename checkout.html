@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-light padding-0">
-    <nav class="container-fluid d-flex justify-content-center p-4">
+    <nav class="container-fluid relative d-flex justify-content-center p-4">
         <div id="nav-content" class="container row d-flex align-items-center justify-content-between">
             <div class="col"><a href="" class="family-yesteryear size-36 color-secondary">Steak House</a></div>
             <div class="col-6 d-flex justify-content-center">
@@ -23,7 +23,7 @@
             </div>
             <div class="nav-menus col-3 row d-flex align-items-center">
                 <a class="col nav-muted nav-button"><img src="./img/pseudo hitam.png" alt=""></a>
-                <a class="col nav-muted nav-button"><img src="./img/search hitam.png" alt=""></a>
+                <a href="menu.html#product" class="col nav-muted nav-button"><img src="./img/search hitam.png" alt=""></a>
                 <a class="col nav-muted nav-button openChart"><img src="./img/keranjang hitam.png" alt=""></a>
                 <a class="col-3 nav-button openSidebar"><img src="./img/garis tiga hitam.png" alt="">
                 </a>
@@ -40,7 +40,11 @@
                 <hr>
             </li>
             <li id="account" class="sidebar-bottom">
-                <ul id="account-null" class="d-block p-0">
+                <ul id="account-notnull" class="p-0" style="display: none;">
+                    <li><a href="account.html" id="user-name">username</a></li>
+                    <li id="user-checkout"><a href="checkout.html">Checkout</a></li>
+                </ul>
+                <ul id="account-null" class="p-0">
                     <li><a href="#" class="loginBtn">Login</a></li>
                     <li><a href="#" class="signUpBtn">Sign up</a></li>
                 </ul>
@@ -50,16 +54,18 @@
             <li>
                 <h5>Chart</h5>
             </li>
-            <li class="">nothing a service</li>
+            <!-- <li class="chart-null d-none">nothing a service</li> -->
+            <li class="chart-items d-flex flex-column align-items-center">
+            </li>
         </ul>
     </nav>
 
-    <main class="padding-20">
-        <section id="hero-section">
-            <div class="d-flex justify-content-center align-items-center">
-                <img src="./img/1.jpg" class="img-fluid rounded" alt=""
-                    style="height: 80vh; border-radius: 20%; opacity: 0.87;">
-            </div>
+    <main class="p-3">
+        <section id="hero-section" class="hero-checkout d-flex align-item-center justify-content-center pt-3">
+            <!-- <div class="d-flex justify-content-center align-items-center"> -->
+            <img src="./img/1.jpg" class="img-fluid" id="hero-img-checkout" alt=""
+                style="width: 80vw; border-radius: 20px;">
+            <!-- </div> -->
             <div id="hero-content" class="container-fluid text-center">
                 <h4 class="family-ruthie color-primary size-48">Products</h4>
                 <h3 class="family-abril size-56">Checkout</h3>
@@ -67,28 +73,172 @@
         </section>
 
         <section class="p-5">
-            <div class="container card">
-                <div class="card-body">
-                  <h5 class="card-title">Address</h5>
-                  <div class="row">
-                    <div class="col"><p class="card-text" style="color:black ;">Megawati</p></div>
-                    <div class="col"><a href="#" class="btn btn-primary">Go somewhere</a></div>
-                  </div>
-                </div>
-                <div class="card-footer text-body-secondary">
-                  2 days ago
-                </div>
-              </div>
-            <!-- <div class="container card">
-                <div class="card">
-                    <p>Address</p>
-                    <div class="row">
-                        <div class="col"><p>Megawati</p></div>
-                        <div class="col"><button>Change Address</button></div>
+            <div class="card container-fluid" style="width: 80vw;">
+                <div class="card-body row p-5">
+                    <p class="col-12 padding-top-5 color-secondary">Address</p>
+                    <div class="col-6 py-2">
+                        <p id="nameAddress" class="card-text color-secondary size-24">- Name - </p>
                     </div>
-                    <p>Jl. Megawati Soekarno Putri no.7 Jaya Indoenesia</p>
+                    <div id="parent-changeAddress" class="col-6 text-end"><button type="button" id="change-address"
+                            class="button hover size-18">Change
+                            Address</button></div>
+                    <p id="locationAddress" class="col-12 text-dark pt-3">- location -</p>
+                    <p id="phoneAddress" class="col-12 text-dark pt-3">- phone - </p>
                 </div>
-            </div> -->
+            </div>
+        </section>
+
+        <section id="address" class=" mx-auto my-auto padding-50 bg-dark width-50 rounded">
+            <div class="header row d-flex ">
+                <h2 class="title-name col-11 text-center">Address</h2>
+                <div class="address-close col-1 text-end size-28 hover">&times;</div>
+            </div>
+            <form action="" class="row size-16 gap-30">
+                <div class="col-12">
+                    <label for="name-address">Name</label>
+                    <input type="text" placeholder="Name"
+                        class="form-control bg-transparent white-placeholder solid-primary text-light"
+                        id="name-address">
+                </div>
+                <div class="col-12">
+                    <label for="email-address">Email</label>
+                    <input type="email" placeholder="jhonDoe@gmail.com"
+                        class="form-control bg-transparent white-placeholder solid-primary text-light"
+                        id="email-address">
+                </div>
+                <div class="col-12">
+                    <label for="phone-address">Phone</label>
+                    <input type="tel" placeholder="01 2929292"
+                        class="form-control bg-transparent white-placeholder solid-primary text-light"
+                        id="phone-address">
+                </div>
+                <div class="col-12">
+                    <label for="location-address">Address</label>
+                    <input type="text" placeholder="JL. Bumi Harapan Raya"
+                        class="form-control bg-transparent white-placeholder solid-primary text-light"
+                        id="location-address">
+                </div>
+                <button type="button" id="save-address" class="col-12 button button-primary rounded mt-4">Save</button>
+            </form>
+        </section>
+
+        <section id="note" class="mx-auto my-auto padding-50 bg-dark width-50 rounded">
+            <div class="header row d-flex ">
+                <h2 class="note-name col-11 text-center">Note</h2>
+                <div class="note-close col-1 text-end size-28 hover">&times;</div>
+            </div>
+            <form action="" class="row size-16 gap-30">
+                <div class="col-12">
+                    <label for="note-content">Note</label>
+                    <div class="col-12">
+                        <textarea name="" id="note-content" cols="30" rows="1" placeholder="Message..."
+                            class="form-control bg-transparent white-placeholder solid-primary text-light"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="save-note" class="col-12 button button-primary rounded mt-4">Save</button>
+            </form>
+        </section>
+        <section class="p-5">
+            <div class="card container-fluid width-80vw">
+                <div class="card-body row p-5">
+                    <p class="col-12 color-secondary padding-top-5">Menu</p>
+                    <div class="row p-4">
+                        <div class="col-2"><img src="./img/image 1.png" alt="" style="width: 90px; border-radius: 10%;">
+                        </div>
+                        <div class="col-4">
+                            <p class="color-secondary font-weight-600">Soto Pedas</p>
+                            <p class="color-primary font-weight-500">1 x 38.95$</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-end font-weight-600 color-secondary">$76.95</p>
+                        </div>
+                    </div>
+                    <div class="row p-4">
+                        <div class="col-2"><img src="./img/image 1.png" alt="" style="width: 90px; border-radius: 10%;">
+                        </div>
+                        <div class="col-4">
+                            <p class="color-secondary font-weight-600">Soto Pedas</p>
+                            <p class="color-primary font-weight-500">1 x 38.95$</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-end font-weight-600 color-secondary">$76.95</p>
+                        </div>
+                    </div>
+                    <div class="row p-4">
+                        <div class="col-6 d-flex flex-column justify-content-center">
+                            <p id="note-note" class="text-dark" style="display: none;">dsdsd</p>
+                            <button type="button" class="btn-note btn btn-outline-dark width-25"
+                                style="border-radius: 20px;">Note</button>
+                        </div>
+                        <p class="col-6 text-end color-secondary">Total : $766.95</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="p-3">
+            <div class="card container-fluid" style="width: 80vw; border-radius: 20px;">
+                <div class="card-body row p-5">
+                    <div class="col-6 py-2">
+                        <p class="card-text color-secondary font-weight-500">Anything else?</p>
+                    </div>
+                    <div class="col-6 text-end"><a href="menu.html" class="button hover size-18">Add
+                            Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="card container-fluid" style="width: 80vw; border-radius: 20px;">
+                <div class="card-body row p-5">
+                    <p class="col-12 pb-5 color-secondary font-weight-500">Invoice</p>
+                    <div class="col-6 py-4">
+                        <p class="card-text color-secondary size-18">Total Price</p>
+                    </div>
+                    <div class="col-6 text-end py-4">
+                        <p class="card-text color-secondary size-18 font-weight-500">$766.95</p>
+                    </div>
+                    <div class="col-6 py-4">
+                        <p class="card-text color-secondary size-18">Discount</p>
+                    </div>
+                    <div class="col-6 text-end py-4">
+                        <p class="card-text color-secondary size-18 font-weight-500">$9.95</p>
+                    </div>
+                    <div class="col-6 py-4">
+                        <p class="card-text color-secondary size-18">Service fee</p>
+                    </div>
+                    <div class="col-6 text-end py-4">
+                        <p class="card-text color-secondary size-18 font-weight-500">$9.95</p>
+                    </div>
+                    <hr class="col-12" style="border-radius: 0%; border: 2px solid black;">
+                    <div class="col-6 py-4">
+                        <p class="card-text color-secondary size-18">Total</p>
+                    </div>
+                    <div class="col-6 text-end py-4">
+                        <p class="card-text color-secondary size-18 font-weight-500">$805.95</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="card container-fluid" style="width: 80vw; border-radius: 20px;">
+                <div class="card-body row p-5">
+                    <p class="col-12 pb-5 color-secondary font-weight-500">Payment Method</p>
+                    <select name="" id="payment-method" class="form-control">
+                        <option value="" selected disabled>Payment Method</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="container-fluid text-end" style="width: 80vw;">
+                <a href="index.html" id="btn-order" class="button hover size-18">Order
+                    Now</a>
+            </div>
         </section>
     </main>
 
@@ -127,8 +277,8 @@
                 2023 Steak
                 House</p>
         </div>
-
     </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="module" src="./js/index.js"></script>
 </body>

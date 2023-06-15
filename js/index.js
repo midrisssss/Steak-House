@@ -1,4 +1,4 @@
-import { openSidebarListener, openChartListener, pageLoad, openProduct, addMenu, substractMenu, signUp, login } from './handler.js';
+import { openSidebarListener, openChartListener, pageLoad, openProduct, plus, minus, signUp, login, addMenu, address, note, bookATable } from './handler.js';
 // import { menu } from './menu.js';
 
 $(document).ready(function () {
@@ -36,7 +36,7 @@ $(document).ready(function () {
     $('.menu-content').hide();
     $('#menu-drink').show();
   });
-  $('.card').click(function () {
+  $('.card-menu').click(function () {
     let id = this.id;
     openProduct(id);
   })
@@ -52,8 +52,9 @@ $(document).ready(function () {
     $('.faqs-answer').slideUp();
     $('#' + this.id + ">.faqs-answer").slideToggle(500);
   })
-  addMenu();
-  substractMenu();
+  plus();
+  minus();
+  $('#addMenu').click(addMenu);
   $('.loginBtn').click(function () {
     $('#signUp').removeClass('show');
     $('#login').addClass('show');
@@ -72,4 +73,21 @@ $(document).ready(function () {
   })
   $('#signUp-submit').click(signUp);
   $('#login-submit').click(login);
+  $('#change-address').click(function () {
+    $('#address').addClass('show');
+  });
+  $('.address-close').click(function () {
+    $('#address').removeClass('show');
+  })
+  $('#save-address').click(address);
+
+  $('.btn-note').click(function () {
+    $('#note').addClass('show');
+  });
+  $('.note-close').click(function () {
+    $('#note').removeClass('show');
+  })
+  $('#save-note').click(note);
+
+  $('#bookATable').click(bookATable);
 });
