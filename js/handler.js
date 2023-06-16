@@ -218,59 +218,70 @@ function minus() {
   })
 }
 
-function addMenu() {
+function addMenu(id) {
   let quantity = $('#quantity').text();
-  let productName = $('.product-name').text();
-  // console.log(productId);
+  let productId = id;
   let dataProduct;
-  if (quantity) {
-    dataProduct = searchMenu(productName);
-    console.log(dataProduct)
-    // data[0].chart.push(dataProduct);
-    // data[0].chart[chart.length - 1].quantity = quantity;
-    // console.log(data[0].chart[chart.length - 1]);
+  if (quantity != 0) {
+    dataProduct = searchMenu(productId);
+    data[0].chart.push(dataProduct[0]);
+
+    data[0].chart[data[0].chart.length - 1]['quantity'] = quantity;
     $('#product').removeClass('show');
     $('main>section>*:not(#product), footer').css({
       "filter": 'blur(0px)',
       "pointer-events": 'auto',
       "user-select": 'auto'
     });
+    chart();
   }
 }
 
-function searchMenu(name) {
+function searchMenu(id) {
   let dataProduct;
 
-  dataProduct = menu.breakfast.filter((p) => p.name == name);
+  dataProduct = menu.breakfast.filter((p) => p.id == id);
   if (dataProduct != undefined) { return dataProduct; }
 
-  dataProduct = menu.lunch.filter((p) => p.name == name);
+  dataProduct = menu.lunch.filter((p) => p.id == id);
   if (dataProduct != undefined) { return dataProduct; }
 
-  dataProduct = menu.dinner.filter((p) => p.name == name);
+  dataProduct = menu.dinner.filter((p) => p.id == id);
   if (dataProduct != undefined) { return dataProduct; }
 
-  dataProduct = menu.dessert.filter((p) => p.name == name);
+  dataProduct = menu.dessert.filter((p) => p.id == id);
   if (dataProduct != undefined) { return dataProduct; }
 
-  dataProduct = menu.drink.filter((p) => p.name == name);
+  dataProduct = menu.drink.filter((p) => p.id == id);
   if (dataProduct != undefined) { return dataProduct; }
 }
 
 function chart() {
+  $('.chart-items').text("");
   if (user[0].chart.length == 0) {
     let kosong = "<li class='text-center'>Chart is empty</li>";
+    $('#checkoutChart').hide();
+    $('#deleteChart').hide();
     $('.chart-items').append(kosong);
+    return;
   }
-  for (let index = 0; index < user[0].chart.length; index++) {
-    let img = "<img src='" + user[0].chart[index].img + "' class='col-4 object-fit-cover h-100 rounded p-0 img-hover' alt=''>";
-    let chartItemName = "<p class='size-12 line-height-20 m-0'>" + user[0].chart[index].name + "</p>";
-    let chartDetail = "<p class='size-12 line-height-20 m-0 color-primary'>" + user[0].chart[index].quantity + " x " + user[0].chart[index].price + "</p>";
+  $('#deleteChart').show();
+  $('#checkoutChart').show();
+  $('#checkoutChart').prop('disabled', false);
+  let price = 0;
+  for (let index = 0; index < data[0].chart.length; index++) {
+    let img = "<img src='" + data[0].chart[index].img + "' class='col-4 object-fit-cover h-100 rounded p-0 img-hover' alt=''>";
+    let chartItemName = "<p class='size-12 line-height-20 m-0'>" + data[0].chart[index].name + "</p>";
+    let chartDetail = "<p class='size-12 line-height-20 m-0 color-primary'>" + data[0].chart[index].quantity + " x " + data[0].chart[index].price + "</p>";
     let div = "<div class='col d-flex flex-column align-items-end p-0 text-end'>" + chartItemName + chartDetail + "</div>";
     let chartItem = "<div class='chart-item row d-flex align-items-center justify-content-center p-1 my-2'>" + img + div + "</div>";
-
     $('.chart-items').append(chartItem);
   }
+  for (let index = 0; index < data[0].chart.length; index++) {
+    price += (data[0].chart[index].price * data[0].chart[index].quantity);
+  }
+  let total = "<li><h3 id='total-price' class='color-primary text-center size-18 mt-3'>Total : $ " + Math.round(price) + "</h3></li>";
+  $('.chart-items').append(total);
 }
 
 function address() {
@@ -324,5 +335,10 @@ function bookATable() {
   console.log(user[0].pendingOrders.table[user[0].pendingOrders.table.length - 1]);
 }
 
+function deleteChart() {
+  data[0].chart.length = 0;
+  chart();
+}
 
-export { openSidebarListener, openChartListener, pageLoad, openProduct, plus, minus, signUp, login, addMenu, address, note, bookATable };
+
+export { openSidebarListener, openChartListener, pageLoad, openProduct, plus, minus, signUp, login, addMenu, address, note, bookATable, deleteChart };

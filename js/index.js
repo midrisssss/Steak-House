@@ -1,5 +1,7 @@
-import { openSidebarListener, openChartListener, pageLoad, openProduct, plus, minus, signUp, login, addMenu, address, note, bookATable } from './handler.js';
+import { openSidebarListener, openChartListener, pageLoad, openProduct, plus, minus, signUp, login, addMenu, address, note, bookATable, deleteChart } from './handler.js';
 // import { menu } from './menu.js';
+
+let id = 0;
 
 $(document).ready(function () {
   pageLoad();
@@ -37,7 +39,7 @@ $(document).ready(function () {
     $('#menu-drink').show();
   });
   $('.card-menu').click(function () {
-    let id = this.id;
+    id = this.id;
     openProduct(id);
   })
   $('.product-close').click(function () {
@@ -54,7 +56,6 @@ $(document).ready(function () {
   })
   plus();
   minus();
-  $('#addMenu').click(addMenu);
   $('.loginBtn').click(function () {
     $('#signUp').removeClass('show');
     $('#login').addClass('show');
@@ -90,4 +91,10 @@ $(document).ready(function () {
   $('#save-note').click(note);
 
   $('#bookATable').click(bookATable);
+
+  $('#addMenu').click(function () {
+    addMenu(id);
+  })
+
+  $('#deleteChart').click(deleteChart);
 });
