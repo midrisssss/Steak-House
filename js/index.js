@@ -1,5 +1,5 @@
 import { openSidebarListener, openChartListener, pageLoad, openProduct, plus, minus, signUp, login, addMenu, address, note, bookATable, deleteChart } from './handler.js';
-// import { menu } from './menu.js';
+import { menu } from './menu.js';
 
 let id = 0;
 
